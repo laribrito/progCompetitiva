@@ -59,34 +59,29 @@ int main(void){
 
                 if(p1.x != p2.x){
                     if ((tabela[j].yInf != -1 && p2.y==tabela[j].yInf) || (tabela[j].yInf == -1 && p1.y - 2 == p2.y)){
-                        if(tabela[j].qtdValido+1 > tabela[i].qtdValido){
-                            tabela[i].yInf = pontos[j].y;
-                            tabela[i].qtdValido=tabela[j].qtdValido+1;
-                        }
+                        tabela[i].yInf = pontos[j].y;
+                        tabela[i].qtdValido=tabela[j].qtdValido+1;
                     }
 
                     if ((tabela[j].ySup != -1 && p2.y==tabela[j].ySup) || (tabela[j].ySup == -1 && p1.y + 2 == p2.y)){
-                        if(tabela[j].qtdValido+1 > tabela[i].qtdValido){
-                            tabela[i].ySup = pontos[j].y;
-                            tabela[i].qtdValido=tabela[j].qtdValido+1;
-                        }
+                        tabela[i].ySup = pontos[j].y;
+                        tabela[i].qtdValido=tabela[j].qtdValido+1;
                     }
                 }
 
-                cout << endl << "i: " << i << " j: " << j <<endl << " ";
-                printf("\n a(%d, %d), b(%d, %d), \n", p1.x, p1.y, p2.x, p2.y);
-                for(auto it=tabela.begin(); it!=tabela.end();it++){
-                    cout << (*it).qtdValido << "  ";
-                }
-                cout << endl;
-                for(auto it=tabela.begin(); it!=tabela.end();it++){
-                    cout << (*it).yInf << " ";
-                }
-                cout << endl;
-                for(auto it=tabela.begin(); it!=tabela.end();it++){
-                    cout << (*it).ySup << " ";
-                }
-                cout << endl;
+                // cout << endl << "i: " << i << " j: " << j <<endl << " ";
+                // for(auto it=tabela.begin(); it!=tabela.end();it++){
+                //     cout << (*it).qtdValido << "  ";
+                // }
+                // cout << endl;
+                // for(auto it=tabela.begin(); it!=tabela.end();it++){
+                //     cout << (*it).yInf << " ";
+                // }
+                // cout << endl;
+                // for(auto it=tabela.begin(); it!=tabela.end();it++){
+                //     cout << (*it).ySup << " ";
+                // }
+                // cout << endl;
 
                 if(tabela[i].qtdValido>maior) maior = tabela[i].qtdValido;
             }
