@@ -15,12 +15,10 @@ int main(){
             posAnterior = 0;
             while(clone.size()>1){
                 posAtual = (posAnterior+m)%clone.size();
-                // if(clone[posAtual]==13) break;
                 clone.erase(clone.begin()+posAtual);
                 posAnterior = posAtual;
             }
             m++;
-            // cout << clone.front() << endl;
         }while(clone.front()!=13);
         cout << m << endl;
         vetor.clear();
